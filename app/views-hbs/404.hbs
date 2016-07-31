@@ -1,0 +1,20 @@
+{{! extends layouts/default}}
+{{> layouts/default}}
+
+{{! block main}}
+{{#main}}
+  <h1>Oops something went wrong</h1>
+  <br>
+  <span>404</span>
+{{/main}}
+
+{{#content}}
+  <div id="error-message-box">
+    <div id="error-stack-trace">
+      <pre>
+        {{! code!= error}}
+        <code>{{{error}}}</code>
+      </pre>
+    </div>
+  </div>
+{{/content}}
